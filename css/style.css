@@ -1,0 +1,84 @@
+:root{
+    --primary-color:#26bbff;
+    --secondary-color: #303034;
+    --light: #EEEEF1;
+    --dark: #303034;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    background-color: var(--secondary-color);
+}
+
+#container{
+    background-color: var(--secondary-color);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 40vw;
+    gap: 1rem;
+    padding: 2rem;
+    height: 50%;
+}
+
+#newDog{
+    border-radius: 2rem;
+    background-color: var(--light);
+    border: 3px solid var(--dark);
+    width: 400px;
+    height: 400px;
+}
+
+#Btn{
+    border: 2px solid var(--primary-color);
+    border-radius: 1rem;
+    width: 8rem;
+    height: 3rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    background-color: var(--secondary-color);
+    color: var(--light);
+    font-weight: 600;
+}
+
+#Btn:hover{
+    background-color: var(--light);
+    color: var(--secondary-color);
+}
+
+#Btn:active{
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--light);
+}
+
+#grid{
+    background-color: var(--secondary-color);
+    border: 3px solid var(--light);
+    border-radius: 2rem;
+    display: grid;
+    margin: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    width: 1000px;
+    height: 1000px;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.table{
+    background-color: var(--light);
+    border: 3px solid var(--dark);
+    border-radius: 1rem;
+}
