@@ -7,7 +7,7 @@ function getRandomDog() {
     })
 }
 
-
+console.log
 
 
 //Evento Boton 
