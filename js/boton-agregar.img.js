@@ -1,23 +1,32 @@
-//Buscar perro aleatorio
-function getRandomDog() {
-    const apiDog = fetch('https://dog.ceo/api/breed/hound/images')
 
-    const apiDog2 = apiDog.then((res) => res.json())
-    apiDog2.then((data) =>{
+//Evento Boton 
+const newImg = document.getElementById('NewDog')
+const newImgDiv = document.getElementById('grid')
+const razaImg = ["spaniel-blenheim","lhasa","shihtzu"][Math.floor(Math.random()*3)]
+
+
+const botonELDOM = document.getElementById('Btn')
+botonELDOM.addEventListener("click", handleClick)
+function handleClick() {
+        fetch ('https://dog.ceo/api/breeds/image/random')
+        .then((res) => res.json())
+        .then((data) =>{
+            console.log(data)
+            pintarImagen(data.message, newImg)
+            pintarImagen(data.message, newImgDiv)
+            //funcion Vega 
+            // if (condition) {
+                
+            //  }
+
     })
 }
 
 
-
-
-//Evento Boton 
-const botonELDOM = document.getElementById('btn')
-botonELDOM.addEventListener("click", handleClick)
-function handleClick() {
-    getRandomDog()
-    //Meter imagen en el div de arriba
+//Import Pintar Img
+function pintarImagen(url,parentNode) {
+	const img = document.createElement('img')
+	img.src = url;
+    parentNode.innerHTML = '';
+    parentNode.appendChild(img)
 }
-
-//Buscar si la raza del perro esta ya seleccionada
-
-//Comprobar si es la ultima celda para poner gato
