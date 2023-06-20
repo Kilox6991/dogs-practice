@@ -81,10 +81,10 @@ body{
     background-color: var(--light);
     border: 3px solid var(--dark);
     border-radius: 2rem;
- display: flex;
- justify-content: center;
- width: 175px;
- height: 175px;
+    display: flex;
+    justify-content: center;
+    width: 175px;
+    height: 175px;
  
 }
 
@@ -95,3 +95,4 @@ img{
    border-radius: 1rem;
    margin: auto;
 }
+
